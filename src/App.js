@@ -5,6 +5,7 @@ import GetLink from "./components/GetLink";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import NestedRoute from './components/NestedRoute/NestedRoute';
 import NotMatch from "./components/NotMatch";
 import PrivetRoute from './components/PrivetRoute';
 import Secret from './components/Secret';
@@ -25,7 +26,9 @@ function App() {
             <Route path="/secret" element={<Secret />} />
             <Route path="/get/:getLink" element={<GetLink />} />
           </Route>
+          <Route path="/nested/*" element={<NestedRoute />} />
           <Route path="*" element={<NotMatch />} />
+          
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>
